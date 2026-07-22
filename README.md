@@ -34,12 +34,12 @@ cp .env_example .env
 | S3_BUCKET_NAME                                         | Name of the S3 bucket containing data                   |
 
 3. Create an S3 bucket and upload the PDF files you want to be searchable.
-4. Create a Pinecone index (one-time manual setup, via the Pinecone console (https://app.pinecone.io/)):
-- Custom settings (not one of Pinecone's hosted embedding models — this project computes embeddings itself via OpenAI)
-- Dimension: 1536 (matches OpenAI's text-embedding-ada-002)
+4. Create a Pinecone index:
+- Custom settings (this project computes embeddings itself via OpenAI)
+- Dimension: 1536 
 - Metric: cosine
 - Type: Serverless
-5. Ingest your documents
+5. Ingest your documents (can be implemented with github actions)
 python src/ingest.py
 6. Run the chat app
 streamlit run app.py
