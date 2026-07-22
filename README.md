@@ -27,11 +27,11 @@ cp .env_example .env
 
 | Variable                                               | Description                                                          |
 |--------------------------------------------------------|----------------------------------------------------------------------|
-| OPENAI_API_KEY                                         | OpenAI API key (get one here (https://platform.openai.com/api-keys)) |
+| OPENAI_API_KEY                                         | OpenAI API key                                                       |
 | PINECONE_API_KEY                                       | Pinecone API key                                                     |
 | PINECONE_INDEX_NAME                                    | Name of your Pinecone index                                          |
 | AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY / AWS_REGION | AWS credentials with read access to your S3 bucket                   |
-| S3_BUCKET_NAME                                         | Name of the S3 bucket containing your source PDFs                    |
+| S3_BUCKET_NAME                                         | Name of the S3 bucket containing data                   |
 
 3. Create an S3 bucket and upload the PDF files you want to be searchable.
 4. Create a Pinecone index (one-time manual setup, via the Pinecone console (https://app.pinecone.io/)):
